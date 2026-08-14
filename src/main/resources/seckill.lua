@@ -13,7 +13,7 @@ local stockKey='seckill:stock:' .. voucherId
 local orderKey='seckill:order:' .. voucherId
 
 -- 3.脚本业务
---3.1.判断库存是否充足
+--3.1.判断库存是否充足。
 local stock = tonumber(redis.call('get', stockKey))
 if stock == nil then
     --print("库存获取失败: " .. stockKey)
